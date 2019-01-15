@@ -9,6 +9,10 @@ Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
+
+
+由于题目说了有且只有唯一解，可以考虑两遍扫描求解：第一遍扫描原数组，将所有的数重新存放到一个dict中，该dict以原数组中的值为键，
+原数组中的下标为值；第二遍扫描原数组，对于每个数nums[i]查看target-nums[i]是否在dict中，若在则可得到结果。 
 """
 
 class Solution():
